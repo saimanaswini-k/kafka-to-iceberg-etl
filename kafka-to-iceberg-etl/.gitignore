@@ -1,0 +1,57 @@
+# Build and dependency directories
+target/
+lib_managed/
+project/
+
+# IDE specific files
+.idea/
+.bloop/
+.metals/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+
+# Logs
+*.log
+derby.log
+logs/
+
+# Temporary files
+*.tmp
+*.swp
+*~
+.DS_Store
+
+# Spark specific
+spark-warehouse/
+metastore_db/
+
+
+# Scala specific
+.scala_dependencies
+.worksheet
+
+# Iceberg specific
+warehouse/
+
+# Local configuration files
+*.conf.local
+application-local.conf
+application-local.properties
+
+
+# Data files
+data/
+
+# Temporary data files
+data/tmp/
+
+# Binary distributions
+*.tgz
+*.tar.gz
+*.zip
+flink-*-bin-scala_* 

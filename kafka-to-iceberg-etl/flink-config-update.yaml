@@ -1,0 +1,41 @@
+# ===== TaskManager Configuration =====
+# Modify these settings in your Flink config.yaml
+
+taskmanager:
+  # Increase the number of task slots for parallel execution
+  numberOfTaskSlots: 4
+  memory:
+    process:
+      # Increase total process memory for the TaskManager
+      size: 2048m
+  # Set to 0.0.0.0 to allow external connections
+  bind-host: 0.0.0.0
+  host: localhost
+
+# ===== JobManager Configuration =====
+jobmanager:
+  bind-host: 0.0.0.0
+  memory:
+    process:
+      size: 2048m
+  rpc:
+    address: localhost
+
+# ===== Parallelism Configuration =====
+parallelism:
+  default: 2
+
+# ===== REST API Configuration =====
+rest:
+  bind-address: 0.0.0.0
+  port: 8081
+
+# ===============================================
+# Instructions:
+# 1. Copy these settings to your Flink config.yaml
+# 2. Start/restart your Flink cluster:
+#    ./bin/stop-cluster.sh
+#    ./bin/start-cluster.sh
+# 3. Verify TaskManagers are running:
+#    ./bin/flink list
+# =============================================== 
